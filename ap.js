@@ -3,7 +3,6 @@ import { input } from "./Input.js";
 class Network {
   constructor(network) {
     this.network = network;
-    this.connectedNode = [];
   }
 
   checkNode(i, x, connection, node = this.network[x].split(" ").slice(1)) {
@@ -17,7 +16,6 @@ class Network {
         connection[i] + connection[i + 1] === node[0] + node[1] ||
         connection[i] + connection[i + 1] === node[1] + node[0]
     ) {
-        this.connectedNode.push(node);
       console.log("true");
       return;
     }
